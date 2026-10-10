@@ -318,7 +318,7 @@
 
   .services-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1px;
     background: var(--line);
     border: 1px solid var(--line);
@@ -407,7 +407,7 @@
 
   .cv-columns {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 64px;
   }
 
@@ -471,30 +471,6 @@
     font-size: 0.92rem;
     color: var(--ink-soft);
   }
-
-  .skills-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-  }
-
-  .skills-list li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 16px;
-    padding-bottom: 14px;
-    border-bottom: 1px solid var(--line);
-    font-size: 0.95rem;
-  }
-
-  .skills-list li:last-child { border-bottom: none; }
-
-  .skills-list .skill-name { color: var(--ink); font-weight: 500; }
-  .skills-list .skill-meta { color: var(--ink-soft); font-size: 0.85rem; }
 
   /* ---------- Contatti ---------- */
   .contact {
@@ -583,7 +559,7 @@
 
   .footer-grid {
     display: grid;
-    grid-template-columns: 1.4fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 40px;
     padding-bottom: 32px;
     border-bottom: 1px solid rgba(255,255,255,0.12);
@@ -672,15 +648,16 @@
   <section id="home" class="hero">
     <div class="container hero-grid">
       <div class="hero-copy">
-        <h1>Un sorriso curato, con calma e competenza</h1>
-        <p class="hero-lede">Visite accurate, spiegazioni chiare e trattamenti su misura: la Dr. Leonardo Bisceglie segue ogni paziente con un approccio delicato, moderno e orientato alla prevenzione.</p>
+        <h1>Dedizione e professionalità al servizio del tuo sorriso</h1>
+        <p class="hero-lede">Visite accurate e trattamenti dedicati in base alle necessità del paziente, con un approccio moderno, non invasivo e orientato alla prevenzione.</p>
         <div class="hero-actions">
           <a href="#contatti" class="btn btn-primary">Contattami</a>
         </div>
         <div class="hero-trust">
-          <div class="trust-item"><strong>13+</strong><span>anni di esperienza clinica</span></div>
-          <div class="trust-item"><strong>4.9/5</strong><span>valutazione media pazienti</span></div>
-          <div class="trust-item"><strong>100%</strong><span>strumentazione sterilizzata</span></div>
+          <div class="trust-item"><strong>+9</strong><span>anni di esperienza clinica</span></div>
+          <div class="trust-item"><strong>Master</strong><span>in protesi fissa</span></div>
+          <div class="trust-item"><strong>Master</strong><span>in implantologia</span></div>
+          <div class="trust-item"><strong>Esperto</strong><span>nel recupero del dente compromesso</span></div>
         </div>
       </div>
       <div class="hero-visual">
@@ -703,29 +680,36 @@
   <section class="services" aria-label="Servizi principali">
     <div class="container">
       <div class="section-head">
-        <h2>Cura dentale completa, in un unico studio</h2>
-        <p>Dalla prevenzione ai trattamenti estetici, ogni fase del percorso è pensata per essere semplice da capire e priva di ansia.</p>
+        <h2>Percorsi terapeutici completi</h2>
+        <p>Dalla prevenzione ai trattamenti estetici ogni fase del percorso è pensata per essere semplice da affrontare, priva di qualsiasi ansia.</p>
       </div>
       <div class="services-grid">
         <article class="service-card">
           <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3c-3 0-5 2-5 5 0 4 2 7 2 10 0 1.5 1 2 2 2s1.5-1.5 1.5-3 .5-3 1.5-3 1.5 1.5 1.5 3 .5 3 1.5 3 2-.5 2-2c0-3 2-6 2-10 0-3-2-5-5-5-1 0-1.5.5-2 .5S13 3 12 3Z"/></svg>
           <h3>Igiene e prevenzione</h3>
-          <p>Sedute di pulizia professionale e controlli periodici per mantenere denti e gengive in salute.</p>
         </article>
         <article class="service-card">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h4l2-6 4 12 2-6h4"/></svg>
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3c-3 0-5 2-5 5 0 4 2 7 2 10 0 1.5 1 2 2 2s1.5-1.5 1.5-3 .5-3 1.5-3 1.5 1.5 1.5 3 .5 3 1.5 3 2-.5 2-2c0-3 2-6 2-10 0-3-2-5-5-5-1 0-1.5.5-2 .5S13 3 12 3Z"/></svg>
           <h3>Conservativa ed endodonzia</h3>
-          <p>Cura della carie e trattamenti canalari eseguiti con tecniche a minima invasività.</p>
         </article>
         <article class="service-card">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="5" y="5" width="14" height="14" rx="3"/><path d="M9 12h6M12 9v6"/></svg>
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3c-3 0-5 2-5 5 0 4 2 7 2 10 0 1.5 1 2 2 2s1.5-1.5 1.5-3 .5-3 1.5-3 1.5 1.5 1.5 3 .5 3 1.5 3 2-.5 2-2c0-3 2-6 2-10 0-3-2-5-5-5-1 0-1.5.5-2 .5S13 3 12 3Z"/></svg>
           <h3>Implantologia</h3>
-          <p>Soluzioni fisse per la sostituzione di denti mancanti, pianificate con tecnologia digitale.</p>
         </article>
         <article class="service-card">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 17c2-1 4-1 6 0s4 1 6 0 4-1 4-1M4 12c2-1 4-1 6 0s4 1 6 0 4-1 4-1"/></svg>
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3c-3 0-5 2-5 5 0 4 2 7 2 10 0 1.5 1 2 2 2s1.5-1.5 1.5-3 .5-3 1.5-3 1.5 1.5 1.5 3 .5 3 1.5 3 2-.5 2-2c0-3 2-6 2-10 0-3-2-5-5-5-1 0-1.5.5-2 .5S13 3 12 3Z"/></svg>
           <h3>Estetica dentale</h3>
-          <p>Sbiancamento e faccette per un sorriso naturale, in linea con i tratti del viso.</p>
+          <p>Sbancamento, ricostruzione estetiche e faccette per un sorriso naturale</p>
+        </article>
+        <article class="service-card">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3c-3 0-5 2-5 5 0 4 2 7 2 10 0 1.5 1 2 2 2s1.5-1.5 1.5-3 .5-3 1.5-3 1.5 1.5 1.5 3 .5 3 1.5 3 2-.5 2-2c0-3 2-6 2-10 0-3-2-5-5-5-1 0-1.5.5-2 .5S13 3 12 3Z"/></svg>
+          <h3>Parodontologia</h3>
+          <p>Trattamenti mirati alla risoluzione della malattia parodontale</p>
+        </article>
+        <article class="service-card">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3c-3 0-5 2-5 5 0 4 2 7 2 10 0 1.5 1 2 2 2s1.5-1.5 1.5-3 .5-3 1.5-3 1.5 1.5 1.5 3 .5 3 1.5 3 2-.5 2-2c0-3 2-6 2-10 0-3-2-5-5-5-1 0-1.5.5-2 .5S13 3 12 3Z"/></svg>
+          <h3>Protesi dentale</h3>
+          <p>Ripristino della funzione masticatoria e dell’estetica di denti compromessi</p>
         </article>
       </div>
     </div>
@@ -746,12 +730,11 @@
         </div>
         <div class="cv-intro-text">
           <h2>Un percorso costruito sulla fiducia dei pazienti</h2>
-          <p>Mi chiamo Leonardo Bisceglie e da oltre tredici anni mi occupo di odontoiatria conservativa, protesica ed estetica. Credo in una medicina dentale che spiega ogni passaggio prima di agire, così da rendere ogni visita serena e comprensibile.</p>
-          <p>Lo studio nasce per offrire cure di livello specialistico in un ambiente accogliente, con tecnologie digitali per diagnosi precise e tempi di recupero ridotti.</p>
+          <p>Mi chiamo Leonardo Bisceglie e da oltre 9 anni mi occupo di odontoiatria.</p>
           <div class="cv-badges">
-            <span class="badge">Laurea in Odontoiatria e Protesi Dentaria</span>
-            <span class="badge">Specializzazione in Implantologia</span>
-            <span class="badge">Iscritta Albo Odontoiatri di Milano</span>
+            <span class="badge">Laurea in odontoiatria e protesi dentaria</span>
+            <span class="badge">Master in protesi fissa</span>
+            <span class="badge">Master in implantologia</span>
           </div>
         </div>
       </div>
@@ -761,37 +744,27 @@
           <h3>Formazione ed esperienza</h3>
           <div class="timeline">
             <div class="timeline-item">
-              <span class="period">2023 — oggi</span>
-              <h4>Titolare, Leonardo Bisceglie</h4>
-              <p>Attività clinica autonoma con focus su conservativa, estetica e implantologia digitale.</p>
+              <span class="period">2017</span>
+              <h4>Laurea in odontoiatria e protesi dentaria, Roma La Sapienza</h4>
+              <p>Tesi di laurea in odontoiatria restaurativa. Voto di laurea 110/110.</p>
             </div>
             <div class="timeline-item">
-              <span class="period">2017 — 2023</span>
-              <h4>Odontoiatra associata, Centro Odontoiatrico San Babila</h4>
-              <p>Gestione di un ambulatorio ad alto volume di pazienti, con specializzazione in endodonzia.</p>
+              <span class="period">2018</span>
+              <h4>Corso di restauri indiretti</h4>
             </div>
             <div class="timeline-item">
-              <span class="period">2015 — 2017</span>
-              <h4>Specializzazione in Implantologia Orale</h4>
-              <p>Master di II livello presso Università degli Studi di Milano.</p>
+              <span class="period">2019</span>
+              <h4>Master annuale in protesi fissa</h4>
             </div>
             <div class="timeline-item">
-              <span class="period">2009 — 2015</span>
-              <h4>Laurea Magistrale in Odontoiatria e Protesi Dentaria</h4>
-              <p>Università degli Studi di Milano, votazione 110/110 con lode.</p>
+              <span class="period">2022</span>
+              <h4>Anatomia chirurgica e tecniche implantari su cadavere</h4>
+            </div>
+            <div class="timeline-item">
+              <span class="period">2025</span>
+              <h4>Master in implantologia</h4>
             </div>
           </div>
-        </div>
-        <div>
-          <h3>Competenze e aggiornamento</h3>
-          <ul class="skills-list">
-            <li><span class="skill-name">Implantologia a carico immediato</span><span class="skill-meta">Certificazione 2022</span></li>
-            <li><span class="skill-name">Odontoiatria conservativa estetica</span><span class="skill-meta">13 anni di pratica</span></li>
-            <li><span class="skill-name">Sedazione cosciente</span><span class="skill-meta">Corso avanzato, 2021</span></li>
-            <li><span class="skill-name">Radiologia digitale e CBCT</span><span class="skill-meta">Formazione continua</span></li>
-            <li><span class="skill-name">Gestione paziente ansioso</span><span class="skill-meta">Workshop specialistico</span></li>
-            <li><span class="skill-name">Inglese professionale (C1)</span><span class="skill-meta">Congressi internazionali</span></li>
-          </ul>
         </div>
       </div>
     </div>
@@ -802,7 +775,6 @@
     <div class="container">
       <div class="section-head" style="margin-left:auto;margin-right:auto;text-align:center;">
         <h2>Contatta il tuo dentista</h2>
-        <p>Chiama, scrivi via email o WhatsApp: ti risponderemo entro un giorno lavorativo per fissare un appuntamento.</p>
       </div>
 
       <div class="contact-grid contact-grid-centered">
@@ -816,7 +788,7 @@
 
           <div class="info-row">
             <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 5h16v14H4V5Z"/><path d="M4 6l8 7 8-7"/></svg>
-            <div><strong>Email</strong><a href="mailto:leonardo.bisceglie@gmail.com">leonardo.bisceglie@gmail.com</a></div>
+            <div><strong>Email</strong><a href="mailto:bisceglieleonardo91@gmail.com">bisceglieleonardo91@gmail.com</a></div>
           </div>
 
           <div class="info-row">
@@ -824,10 +796,7 @@
             <div>
               <strong>Città in cui opero</strong>
               <div class="cities-list">
-                <span class="city-chip">Milano</span>
-                <span class="city-chip">Monza</span>
-                <span class="city-chip">Bergamo</span>
-                <span class="city-chip">Como</span>
+                <span class="city-chip">Torino</span>
               </div>
             </div>
           </div>
@@ -846,10 +815,6 @@
 <footer>
   <div class="container">
     <div class="footer-grid">
-      <div>
-        <p class="footer-brand">Leonardo Bisceglie</p>
-        <p>Odontoiatria moderna e attenta al paziente, attiva a Milano, Monza, Bergamo e Como. Prevenzione, cura ed estetica dentale ovunque tu ti trovi.</p>
-      </div>
       <div class="footer-col">
         <h4>Sezioni</h4>
         <ul>
@@ -862,14 +827,14 @@
         <h4>Contatti rapidi</h4>
         <ul>
           <li><a href="tel:+393891206819">3891206819</a></li>
-          <li><a href="mailto:leonardo.bisceglie@gmail.com">leonardo.bisceglie@gmail.com</a></li>
+          <li><a href="mailto:bisceglieleonardo91@gmail.com">bisceglieleonardo91@gmail.com</a></li>
           <li><a href="https://wa.me/393891206819" target="_blank" rel="noopener">WhatsApp</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <span>© 2026 Leonardo Bisceglie. Tutti i diritti riservati.</span>
-      <span>P.IVA 00000000000 · Iscrizione Albo Odontoiatri di XXX n. 0000</span>
+      <span>Iscrizione all’albo di Avellino n. 412 · P.IVA 02979000649</span>
     </div>
   </div>
 </footer>
