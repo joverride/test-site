@@ -33,16 +33,17 @@
 
 /* Tokens */
 :root {
-  --abyss: #08161f;
-  --abyss-2: #0f2733;
-  --porcelain: #eef3f1;
-  --ink: #0c1a22;
-  --soft: #4b5f69;
-  --soft-dark: #9fb3bc;
-  --aqua: #6fe3d2;
-  --ultra: #3247e0;
-  --line-dark: rgba(238, 243, 241, 0.16);
-  --line-light: rgba(12, 26, 34, 0.16);
+  --abyss: #0b2a33;
+  --abyss-2: #123a45;
+  --porcelain: #f3f1ec;
+  --ink: #10201f;
+  --soft: #4a5e5c;
+  --soft-dark: #a9c7be;
+  --aqua: #c9a96a;
+  --brass: #7a5e22;
+  --sage: #a9c7be;
+  --line-dark: rgba(243, 241, 236, 0.16);
+  --line-light: rgba(16, 32, 31, 0.16);
 
   --serif: "Instrument Serif", "Iowan Old Style", Georgia, serif;
   --sans: "Inter Tight", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
@@ -86,7 +87,7 @@ a {
 }
 
 :focus-visible {
-  outline: 2px solid var(--ultra);
+  outline: 2px solid var(--brass);
   outline-offset: 4px;
 }
 
@@ -139,7 +140,7 @@ section {
   gap: 16px;
   height: var(--head);
   padding-inline: var(--gutter);
-  background: rgba(8, 22, 31, 0.94);
+  background: rgba(11, 42, 51, 0.94);
   color: var(--porcelain);
 }
 
@@ -231,8 +232,8 @@ section {
   min-height: calc(100svh - var(--head));
   padding-block: clamp(40px, 7vw, 96px);
   background:
-    radial-gradient(900px circle at 85% 20%, rgba(50, 71, 224, 0.28), transparent 60%),
-    radial-gradient(700px circle at 5% 100%, rgba(111, 227, 210, 0.12), transparent 60%),
+    radial-gradient(900px circle at 85% 20%, rgba(169, 199, 190, 0.16), transparent 60%),
+    radial-gradient(700px circle at 5% 100%, rgba(201, 169, 106, 0.12), transparent 60%),
     var(--abyss);
   color: var(--porcelain);
 }
@@ -245,7 +246,7 @@ section {
   height: 520px;
   margin: -260px 0 0 -260px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(111, 227, 210, 0.2), transparent 65%);
+  background: radial-gradient(circle, rgba(201, 169, 106, 0.16), transparent 65%);
   transform: translate3d(var(--gx, 70%), var(--gy, 30%), 0);
   pointer-events: none;
 }
@@ -444,8 +445,8 @@ section {
 }
 
 .tooth {
-  fill: rgba(238, 243, 241, 0.06);
-  stroke: rgba(238, 243, 241, 0.34);
+  fill: rgba(243, 241, 236, 0.06);
+  stroke: rgba(243, 241, 236, 0.34);
   stroke-width: 1.5;
   transform-box: fill-box;
   transform-origin: center;
@@ -620,7 +621,7 @@ section {
   min-height: 420px;
   overflow: hidden;
   background:
-    radial-gradient(500px circle at 100% 0, rgba(50, 71, 224, 0.5), transparent 60%),
+    radial-gradient(500px circle at 100% 0, rgba(169, 199, 190, 0.22), transparent 60%),
     var(--abyss);
   color: var(--porcelain);
   transform: perspective(900px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
@@ -657,7 +658,7 @@ section {
   inset: 0;
   background: radial-gradient(
     320px circle at var(--sx, 50%) var(--sy, 0%),
-    rgba(111, 227, 210, 0.22),
+    rgba(201, 169, 106, 0.2),
     transparent 65%
   );
   opacity: 0;
@@ -679,7 +680,7 @@ section {
 }
 
 .tile-slot a {
-  color: var(--ultra);
+  color: var(--brass);
 }
 
 /* Contact */
@@ -756,7 +757,7 @@ section {
 
 .marquee span {
   padding-right: 0.5em;
-  color: rgba(238, 243, 241, 0.09);
+  color: rgba(243, 241, 236, 0.09);
   font-family: var(--serif);
   font-size: clamp(4rem, 14vw, 12rem);
   line-height: 1;
@@ -789,7 +790,7 @@ section {
   .story-visual {
     z-index: 2;
     height: 40svh;
-    background: linear-gradient(var(--abyss) 82%, rgba(8, 22, 31, 0));
+    background: linear-gradient(var(--abyss) 82%, rgba(11, 42, 51, 0));
   }
 
   .arch {
