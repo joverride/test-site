@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TMP_COMPANY — Software SaaS</title>
-  <meta name="description" content="TMP_COMPANY progetta software SaaS, un prodotto alla volta. Catalogo: Dental Journey, gestionale EHS per studi dentistici.">
+  <title>TMP_COMPANY - Software SaaS</title>
+  <meta name="description" content="TMP_COMPANY propone software SaaS già pronti, un prodotto alla volta. Catalogo: Dental Journey, gestionale EHS per studi dentistici.">
   <meta name="theme-color" content="#0a2a3c">
-  <meta property="og:title" content="TMP_COMPANY — Software SaaS">
-  <meta property="og:description" content="Software SaaS, un prodotto alla volta. Primo del catalogo: Dental Journey, gestionale EHS per studi dentistici.">
+  <meta property="og:title" content="TMP_COMPANY - Software SaaS">
+  <meta property="og:description" content="Software SaaS già pronti, un prodotto alla volta. Primo del catalogo: Dental Journey, gestionale EHS per studi dentistici.">
   <meta property="og:type" content="website">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="assets/fonts/instrument-serif-400.woff2" as="font" type="font/woff2" crossorigin>
@@ -21,7 +21,6 @@
     <a class="mark" href="#top" aria-label="TMP_COMPANY, inizio pagina">TMP_COMPANY</a>
     <nav aria-label="Principale">
       <a href="#visione">Visione</a>
-      <a href="#dental-journey">Dental Journey</a>
       <a href="#catalogo">Catalogo</a>
       <a class="pill" href="#contatti">Contatti</a>
     </nav>
@@ -36,108 +35,117 @@
 
       <div class="hero-copy">
         <h1>Software che segue il lavoro, passo dopo passo.</h1>
-        <p class="lede">TMP_COMPANY progetta software in abbonamento, un prodotto alla volta. Il primo del catalogo è Dental Journey, un gestionale EHS per studi dentistici.</p>
+        <p class="lede">Software in abbonamento, un prodotto alla volta. Il primo è Dental Journey, gestionale EHS per studi dentistici.</p>
         <p class="actions">
           <a class="btn btn-primary" href="#dental-journey">Scopri Dental Journey</a>
           <a class="btn btn-ghost" href="#catalogo">Vai al catalogo</a>
         </p>
       </div>
 
-      <figure class="orbits" aria-label="Il catalogo come sistema di orbite: un prodotto già in orbita, altre orbite libere per i prossimi.">
-        <svg viewBox="0 0 600 600" role="img" aria-hidden="true">
-          <defs>
-            <radialGradient id="core" cx="50%" cy="50%" r="50%">
-              <stop offset="0" stop-color="#3fae7f" stop-opacity=".9"/>
-              <stop offset=".45" stop-color="#2f6fb0" stop-opacity=".45"/>
-              <stop offset="1" stop-color="#2f6fb0" stop-opacity="0"/>
-            </radialGradient>
-          </defs>
-          <circle class="core" cx="300" cy="300" r="110" fill="url(#core)"/>
-          <circle class="ring" cx="300" cy="300" r="120"/>
-          <circle class="ring" cx="300" cy="300" r="200"/>
-          <circle class="ring" cx="300" cy="300" r="280"/>
-          <g class="spin spin-a"><circle class="planet planet-live" cx="300" cy="100" r="15"/></g>
-          <g class="spin spin-b"><circle class="planet planet-free" cx="580" cy="300" r="10"/></g>
-          <g class="spin spin-c"><circle class="planet planet-free" cx="300" cy="180" r="8"/></g>
-        </svg>
-        <figcaption>
-          <span><i class="dot dot-live"></i>Dental Journey</span>
-          <span><i class="dot dot-free"></i>Orbite libere per i prossimi prodotti</span>
-        </figcaption>
-      </figure>
+      <!-- Il catalogo come mazzo di schede: la prima è già in mano, le altre aspettano -->
+      <div class="deck" aria-hidden="true">
+        <div class="deck-card deck-3"></div>
+        <div class="deck-card deck-2"></div>
+        <div class="deck-card deck-1">
+          <svg class="arch arch-mini" viewBox="0 0 600 360"></svg>
+          <p class="deck-name">Dental Journey</p>
+          <p class="deck-sub">Gestionale EHS per studi dentistici</p>
+        </div>
+      </div>
     </section>
 
     <!-- VISIONE -->
     <section class="vision" id="visione">
-      <p class="vision-text" data-words>Un buon software non si nota. Toglie attrito, libera tempo e lascia a chi lavora lo spazio per fare bene il proprio mestiere. Costruiamo prodotti SaaS dedicati a un mestiere preciso, uno alla volta, e li facciamo crescere insieme a chi li usa.</p>
-    </section>
-
-    <!-- DENTAL JOURNEY -->
-    <section class="story" id="dental-journey" data-stage="1">
-      <div class="story-visual" data-live>
-        <svg class="arch" viewBox="0 0 600 360" aria-hidden="true"></svg>
-        <p class="story-name">Dental Journey</p>
-        <p class="story-sub">Gestionale EHS per studi dentistici</p>
+      <div class="step" style="--i: 0">
+        <h2>Un mestiere alla volta.</h2>
+        <p>Ogni prodotto è pensato per un lavoro preciso e per chi lo svolge ogni giorno.</p>
       </div>
-
-      <div class="story-body">
-        <h2>Il percorso di una giornata in studio, in un unico gestionale.</h2>
-        <p class="story-intro">Dall'agenda al richiamo successivo, Dental Journey riunisce le aree di lavoro dello studio dentistico.</p>
-
-        <ol class="stages">
-          <li class="stage" data-n="1">
-            <h3>Agenda e sedi</h3>
-            <p>Appuntamenti, sale e sedi dello studio in un'unica vista, per organizzare la giornata senza rincorrere i fogli.</p>
-          </li>
-          <li class="stage" data-n="2">
-            <h3>Cartella clinica e odontogramma</h3>
-            <p>Scheda del paziente, odontogramma, consensi e documenti insieme, ritrovabili dove servono.</p>
-          </li>
-          <li class="stage" data-n="3">
-            <h3>Cure e preventivi</h3>
-            <p>Trattamenti organizzati per categoria, preventivi e prescrizioni collegati alla scheda del paziente.</p>
-          </li>
-          <li class="stage" data-n="4">
-            <h3>Richiami</h3>
-            <p>Controlli e rientri programmati, così il paziente non viene dimenticato dopo la visita.</p>
-          </li>
-          <li class="stage" data-n="5">
-            <h3>Gestione dello studio</h3>
-            <p>Magazzino, spese e contabilità, ruoli e permessi del personale e registro delle attività.</p>
-          </li>
-        </ol>
-
-        <p class="story-note">Dental Journey è in preparazione. Per sapere quando sarà disponibile, <a href="#contatti">scrivici</a>.</p>
+      <div class="step" style="--i: 1">
+        <h2>Prodotti già pronti.</h2>
+        <p>Software in abbonamento, pronto da usare. Non vendiamo progetti su misura.</p>
+      </div>
+      <div class="step" style="--i: 2">
+        <h2>Un catalogo che cresce.</h2>
+        <p>Un prodotto oggi, altri in arrivo, con la stessa cura nei dettagli.</p>
       </div>
     </section>
 
     <!-- CATALOGO -->
     <section class="catalog" id="catalogo">
       <h2>Catalogo</h2>
-      <p class="catalog-intro">Un prodotto oggi, altri in arrivo. Ogni nuovo software trova qui il suo posto.</p>
 
       <div class="shelf">
-        <!-- Per aggiungere un prodotto: duplicare un <article class="tile"> e aggiornare titolo, descrizione e stato. -->
-        <article class="tile tile-main" data-tilt>
-          <div class="tile-shine" aria-hidden="true"></div>
-          <p class="tile-state">In preparazione</p>
-          <h3>Dental Journey</h3>
-          <p>Gestionale EHS per studi dentistici: agenda, cartella clinica e odontogramma, cure e preventivi, richiami e gestione dello studio.</p>
-          <a class="btn btn-primary" href="#dental-journey">Esplora il percorso</a>
-        </article>
+        <!-- Per aggiungere un prodotto: 1) duplicare un <a class="tile"> qui sotto; 2) duplicare l'<article class="product"> più in basso. -->
+        <a class="tile tile-main" href="#dental-journey" data-tilt>
+          <span class="tile-shine" aria-hidden="true"></span>
+          <span class="tile-state">In preparazione</span>
+          <span class="tile-title">Dental Journey</span>
+          <span class="tile-desc">Gestionale EHS per studi dentistici.</span>
+        </a>
 
-        <article class="tile tile-slot">
-          <p class="tile-state">In arrivo</p>
-          <h3>Il prossimo prodotto</h3>
-          <p>Il catalogo è in crescita.</p>
-        </article>
+        <div class="tile tile-slot">
+          <span class="tile-state">In arrivo</span>
+          <span class="tile-title">Il prossimo prodotto</span>
+          <span class="tile-desc">Il catalogo è in crescita.</span>
+        </div>
       </div>
+
+      <article class="product" id="dental-journey">
+        <div class="story" data-stage="1">
+          <div class="story-visual">
+            <svg class="arch" viewBox="0 0 600 360" aria-hidden="true"></svg>
+            <p class="story-name">Dental Journey</p>
+            <p class="story-sub">Gestionale EHS per studi dentistici</p>
+          </div>
+
+          <div class="story-body">
+            <h3>Il percorso di una giornata in studio, in un unico gestionale.</h3>
+            <p class="story-intro">Dall'agenda al richiamo successivo, Dental Journey riunisce le aree di lavoro dello studio dentistico.</p>
+
+            <ol class="stages">
+              <li class="stage" data-n="1">
+                <h4>Agenda e sedi</h4>
+                <p>Appuntamenti, sale e sedi dello studio in un'unica vista, per organizzare la giornata senza rincorrere i fogli.</p>
+              </li>
+              <li class="stage" data-n="2">
+                <h4>Cartella clinica e odontogramma</h4>
+                <p>Scheda del paziente, odontogramma, consensi e documenti insieme, ritrovabili dove servono.</p>
+              </li>
+              <li class="stage" data-n="3">
+                <h4>Cure e preventivi</h4>
+                <p>Trattamenti organizzati per categoria, preventivi e prescrizioni collegati alla scheda del paziente.</p>
+              </li>
+              <li class="stage" data-n="4">
+                <h4>Richiami</h4>
+                <p>Controlli e rientri programmati, così il paziente non viene dimenticato dopo la visita.</p>
+              </li>
+              <li class="stage" data-n="5">
+                <h4>Gestione dello studio</h4>
+                <p>Magazzino, spese e contabilità, ruoli e permessi del personale e registro delle attività.</p>
+              </li>
+            </ol>
+
+            <p class="story-note">Dental Journey è in preparazione. Per sapere quando sarà disponibile, <a href="#contatti">scrivici</a>.</p>
+          </div>
+        </div>
+      </article>
     </section>
 
     <!-- CONTATTI -->
     <section class="contact" id="contatti">
-      <p class="contact-line">Per informazioni sui prodotti</p>
-      <a class="mail" href="mailto:info@TMP_COMPANI.it">info@TMP_COMPANI.it</a>
+      <div class="contact-copy">
+        <h2>Parliamone.</h2>
+        <p>Scrivici per conoscere il catalogo e sapere quando Dental Journey sarà disponibile.</p>
+      </div>
+
+      <div class="mailcard">
+        <p class="mc-label">Per informazioni sui prodotti</p>
+        <a class="mail" href="mailto:info@TMP_COMPANI.it">info@TMP_COMPANI.it</a>
+        <div class="mc-actions">
+          <button class="btn btn-primary" type="button" data-copy>Copia indirizzo</button>
+          <span class="mc-status" role="status" aria-live="polite"></span>
+        </div>
+      </div>
     </section>
 
   </main>

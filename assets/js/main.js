@@ -36,26 +36,11 @@
     root.classList.toggle("is-hidden", document.hidden);
   });
 
-  /* Vision text: wrap words so CSS scroll-driven animation can light them up */
-  document.querySelectorAll("[data-words]").forEach((el) => {
-    const words = el.textContent.trim().split(/\s+/);
-    el.textContent = "";
-    words.forEach((word, i) => {
-      const span = document.createElement("span");
-      span.className = "w";
-      span.textContent = word;
-      el.appendChild(span);
-      if (i < words.length - 1) el.appendChild(document.createTextNode(" "));
-    });
-  });
-
-  /* Dental Journey: build the dental arches from a few trigonometric lines */
-  const arch = document.querySelector(".arch");
+  /* Dental arches: parabolic upper and lower rows of 16 teeth, grouped in 5 zones left to right */
   const NS = "http://www.w3.org/2000/svg";
 
-  if (arch) {
+  const buildArch = (svg) => {
     const teeth = 16;
-    /* Parabolic arches: upper (side -1) and lower (side 1), 16 teeth each */
     [-1, 1].forEach((side) => {
       for (let i = 0; i < teeth; i++) {
         const t = (i + 0.5) / teeth;
@@ -65,6 +50,7 @@
         const angle = (Math.atan2(-side * 2 * 112 * u, 250) * 180) / Math.PI;
         const w = 18 + 10 * u * u;
         const h = 34 - 4 * u * u;
+        const zone = Math.min(5, Math.floor(t * 5) + 1);
 
         const g = document.createElementNS(NS, "g");
         g.setAttribute("transform", `translate(${x.toFixed(1)} ${y.toFixed(1)}) rotate(${angle.toFixed(1)})`);
@@ -76,17 +62,22 @@
         r.setAttribute("width", w.toFixed(1));
         r.setAttribute("height", h.toFixed(1));
         r.setAttribute("rx", "7");
-        r.dataset.g = String(Math.min(5, Math.floor(t * 5) + 1));
+        r.dataset.g = String(zone);
+        r.style.setProperty("--g", String(zone));
 
         g.appendChild(r);
-        arch.appendChild(g);
+        svg.appendChild(g);
       }
     });
+  };
 
-    /* Active stage follows the viewport centre */
-    const story = document.querySelector(".story");
-    const stages = Array.from(document.querySelectorAll(".stage"));
+  document.querySelectorAll(".arch").forEach(buildArch);
 
+  /* Product story: the active stage follows the viewport centre and lights its zone */
+  const story = document.querySelector(".story");
+  const stages = Array.from(document.querySelectorAll(".stage"));
+
+  if (story && stages.length) {
     const stageObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((e) => {
@@ -106,8 +97,43 @@
     stages[0].classList.add("is-active");
   }
 
+  /* Contact: copy the address, open the envelope as feedback */
+  const copyBtn = document.querySelector("[data-copy]");
+
+  if (copyBtn) {
+    const card = copyBtn.closest(".mailcard");
+    const mail = card.querySelector(".mail");
+    const status = card.querySelector(".mc-status");
+    let timer = 0;
+
+    const done = (message) => {
+      status.textContent = message;
+      card.classList.add("is-open");
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        status.textContent = "";
+        card.classList.remove("is-open");
+      }, 2400);
+    };
+
+    copyBtn.addEventListener("click", async () => {
+      const address = mail.textContent.trim();
+      try {
+        await navigator.clipboard.writeText(address);
+        done("Indirizzo copiato");
+      } catch (err) {
+        const range = document.createRange();
+        range.selectNodeContents(mail);
+        const sel = window.getSelection();
+        sel.removeAllRanges();
+        sel.addRange(range);
+        done("Seleziona e copia l'indirizzo");
+      }
+    });
+  }
+
   if (finePointer && !reduceMotion) {
-    /* Hero: pointer parallax and glow, active only while the hero is on screen */
+    /* Hero: pointer parallax and glow, batched with rAF */
     const hero = document.querySelector(".hero");
     let heroFrame = 0;
     let hx = 0;
@@ -128,7 +154,7 @@
       }
     });
 
-    /* Featured product tile: tilt and light that follow the pointer */
+    /* Product tile: tilt and light that follow the pointer */
     document.querySelectorAll("[data-tilt]").forEach((tile) => {
       let frame = 0;
       let nx = 0;
