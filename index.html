@@ -4,11 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>TMP_COMPANY — Software SaaS</title>
-  <meta name="description" content="TMP_COMPANY sviluppa software SaaS. Catalogo prodotti: Dental Journey, gestionale EHS per studi dentistici.">
+  <meta name="description" content="TMP_COMPANY progetta software SaaS, un prodotto alla volta. Catalogo: Dental Journey, gestionale EHS per studi dentistici.">
+  <meta name="theme-color" content="#08161f">
   <meta property="og:title" content="TMP_COMPANY — Software SaaS">
-  <meta property="og:description" content="Software SaaS. Primo prodotto: Dental Journey, gestionale EHS per studi dentistici.">
+  <meta property="og:description" content="Software SaaS, un prodotto alla volta. Primo del catalogo: Dental Journey, gestionale EHS per studi dentistici.">
   <meta property="og:type" content="website">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/instrument-serif-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter-tight-400.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="assets/js/main.js" defer></script>
 </head>
@@ -17,60 +20,140 @@
   <header class="top">
     <a class="mark" href="#top" aria-label="TMP_COMPANY, inizio pagina">TMP_COMPANY</a>
     <nav aria-label="Principale">
+      <a href="#visione">Visione</a>
+      <a href="#dental-journey">Dental Journey</a>
       <a href="#catalogo">Catalogo</a>
-      <a href="#contatti">Contatti</a>
+      <a class="pill" href="#contatti">Contatti</a>
     </nav>
     <span class="progress" aria-hidden="true"></span>
   </header>
 
   <main id="top">
 
-    <section class="hero">
-      <p class="kicker">Software SaaS</p>
-      <h1>Strumenti digitali per chi lavora ogni giorno con precisione.</h1>
-      <p class="lede">TMP_COMPANY sviluppa software in abbonamento. Il primo prodotto del catalogo è Dental Journey, un gestionale EHS per studi dentistici.</p>
+    <!-- HERO -->
+    <section class="hero" data-live>
+      <div class="hero-glow" aria-hidden="true"></div>
 
-      <svg class="trace" viewBox="0 0 1000 160" preserveAspectRatio="none" aria-hidden="true">
-        <path pathLength="1" d="M0 120 C 180 20, 260 150, 420 84 S 660 10, 800 70 S 960 130, 1000 40" />
-        <circle cx="420" cy="84" r="5" />
-        <circle cx="800" cy="70" r="5" />
-      </svg>
+      <div class="hero-copy">
+        <h1>Software che segue il lavoro, passo dopo passo.</h1>
+        <p class="lede">TMP_COMPANY progetta software in abbonamento, un prodotto alla volta. Il primo del catalogo è Dental Journey, un gestionale EHS per studi dentistici.</p>
+        <p class="actions">
+          <a class="btn btn-primary" href="#dental-journey">Scopri Dental Journey</a>
+          <a class="btn btn-ghost" href="#catalogo">Vai al catalogo</a>
+        </p>
+      </div>
 
-      <p class="wordmark" aria-hidden="true">TMP_COMPANY</p>
+      <figure class="orbits" aria-label="Il catalogo come sistema di orbite: un prodotto già in orbita, altre orbite libere per i prossimi.">
+        <svg viewBox="0 0 600 600" role="img" aria-hidden="true">
+          <defs>
+            <radialGradient id="core" cx="50%" cy="50%" r="50%">
+              <stop offset="0" stop-color="#6fe3d2" stop-opacity=".9"/>
+              <stop offset=".45" stop-color="#3247e0" stop-opacity=".45"/>
+              <stop offset="1" stop-color="#3247e0" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <circle class="core" cx="300" cy="300" r="110" fill="url(#core)"/>
+          <circle class="ring" cx="300" cy="300" r="120"/>
+          <circle class="ring" cx="300" cy="300" r="200"/>
+          <circle class="ring" cx="300" cy="300" r="280"/>
+          <g class="spin spin-a"><circle class="planet planet-live" cx="300" cy="100" r="15"/></g>
+          <g class="spin spin-b"><circle class="planet planet-free" cx="580" cy="300" r="10"/></g>
+          <g class="spin spin-c"><circle class="planet planet-free" cx="300" cy="180" r="8"/></g>
+        </svg>
+        <figcaption>
+          <span><i class="dot dot-live"></i>Dental Journey</span>
+          <span><i class="dot dot-free"></i>Orbite libere per i prossimi prodotti</span>
+        </figcaption>
+      </figure>
     </section>
 
+    <!-- VISIONE -->
+    <section class="vision" id="visione">
+      <p class="vision-text" data-words>Un buon software non si nota. Toglie attrito, libera tempo e lascia a chi lavora lo spazio per fare bene il proprio mestiere. Costruiamo prodotti SaaS dedicati a un mestiere preciso, uno alla volta, e li facciamo crescere insieme a chi li usa.</p>
+    </section>
+
+    <!-- DENTAL JOURNEY -->
+    <section class="story" id="dental-journey" data-stage="1">
+      <div class="story-visual" data-live>
+        <svg class="arch" viewBox="0 0 600 360" aria-hidden="true"></svg>
+        <p class="story-name">Dental Journey</p>
+        <p class="story-sub">Gestionale EHS per studi dentistici</p>
+      </div>
+
+      <div class="story-body">
+        <h2>Il percorso di una giornata in studio, in un unico gestionale.</h2>
+        <p class="story-intro">Dall'agenda al richiamo successivo, Dental Journey riunisce le aree di lavoro dello studio dentistico.</p>
+
+        <ol class="stages">
+          <li class="stage" data-n="1">
+            <h3>Agenda e sedi</h3>
+            <p>Appuntamenti, sale e sedi dello studio in un'unica vista, per organizzare la giornata senza rincorrere i fogli.</p>
+          </li>
+          <li class="stage" data-n="2">
+            <h3>Cartella clinica e odontogramma</h3>
+            <p>Scheda del paziente, odontogramma, consensi e documenti insieme, ritrovabili dove servono.</p>
+          </li>
+          <li class="stage" data-n="3">
+            <h3>Cure e preventivi</h3>
+            <p>Trattamenti organizzati per categoria, preventivi e prescrizioni collegati alla scheda del paziente.</p>
+          </li>
+          <li class="stage" data-n="4">
+            <h3>Richiami</h3>
+            <p>Controlli e rientri programmati, così il paziente non viene dimenticato dopo la visita.</p>
+          </li>
+          <li class="stage" data-n="5">
+            <h3>Gestione dello studio</h3>
+            <p>Magazzino, spese e contabilità, ruoli e permessi del personale e registro delle attività.</p>
+          </li>
+        </ol>
+
+        <p class="story-note">Dental Journey è in preparazione. Per sapere quando sarà disponibile, <a href="#contatti">scrivici</a>.</p>
+      </div>
+    </section>
+
+    <!-- CATALOGO -->
     <section class="catalog" id="catalogo">
       <h2>Catalogo</h2>
+      <p class="catalog-intro">Un prodotto oggi, altri in arrivo. Ogni nuovo software trova qui il suo posto.</p>
 
-      <ul class="index">
-        <!-- Per aggiungere un prodotto: duplicare un <li class="item"> e aggiornare nome, descrizione e stato. -->
-        <li class="item">
-          <a class="item-link" href="#catalogo">
-            <span class="item-name">Dental Journey</span>
-            <span class="item-desc">Gestionale EHS per studi dentistici.</span>
-            <span class="item-state">In catalogo</span>
-          </a>
-        </li>
+      <div class="shelf">
+        <!-- Per aggiungere un prodotto: duplicare un <article class="tile"> e aggiornare titolo, descrizione e stato. -->
+        <article class="tile tile-main" data-tilt>
+          <div class="tile-shine" aria-hidden="true"></div>
+          <p class="tile-state">In preparazione</p>
+          <h3>Dental Journey</h3>
+          <p>Gestionale EHS per studi dentistici: agenda, cartella clinica e odontogramma, cure e preventivi, richiami e gestione dello studio.</p>
+          <a class="btn btn-primary" href="#dental-journey">Esplora il percorso</a>
+        </article>
 
-        <li class="item is-soon">
-          <span class="item-link">
-            <span class="item-name">Prossimo prodotto</span>
-            <span class="item-desc">Il catalogo è in crescita.</span>
-            <span class="item-state">In arrivo</span>
-          </span>
-        </li>
-      </ul>
+        <article class="tile tile-slot">
+          <p class="tile-state">In arrivo</p>
+          <h3>Il prossimo prodotto</h3>
+          <p>Il catalogo è in crescita.</p>
+        </article>
+
+        <article class="tile tile-slot">
+          <h3>Hai un mestiere da digitalizzare?</h3>
+          <p><a href="#contatti">Scrivici</a> e parliamone.</p>
+        </article>
+      </div>
     </section>
 
+    <!-- CONTATTI -->
     <section class="contact" id="contatti">
-      <h2>Contatti</h2>
-      <p class="contact-line">Per informazioni scrivi a</p>
+      <p class="contact-line">Per informazioni e collaborazioni</p>
       <a class="mail" href="mailto:info@TMP_COMPANI.it">info@TMP_COMPANI.it</a>
     </section>
 
   </main>
 
   <footer class="foot">
+    <div class="marquee" aria-hidden="true" data-live>
+      <div class="marquee-track">
+        <span>TMP_COMPANY</span><span>TMP_COMPANY</span><span>TMP_COMPANY</span><span>TMP_COMPANY</span>
+        <span>TMP_COMPANY</span><span>TMP_COMPANY</span><span>TMP_COMPANY</span><span>TMP_COMPANY</span>
+      </div>
+    </div>
     <p>&copy; 2026 TMP_COMPANY</p>
     <!-- TODO: inserire ragione sociale, sede e P.IVA se richiesti per il sito. Non inventati. -->
   </footer>
