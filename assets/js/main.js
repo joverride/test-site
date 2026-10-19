@@ -139,7 +139,7 @@
     let hx = 0;
     let hy = 0;
 
-    hero.addEventListener("pointermove", (e) => {
+    if (hero) hero.addEventListener("pointermove", (e) => {
       const r = hero.getBoundingClientRect();
       hx = e.clientX - r.left;
       hy = e.clientY - r.top;
