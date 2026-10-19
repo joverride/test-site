@@ -663,6 +663,35 @@ section {
   color: var(--soft-dark);
 }
 
+.faq {
+  margin-top: 40px;
+}
+
+.faq h4 {
+  margin-bottom: 8px;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.faq details {
+  border-bottom: 1px solid var(--line);
+}
+
+.faq summary {
+  padding-block: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.faq details p {
+  padding-bottom: 14px;
+  color: var(--soft-dark);
+}
+
+.faq details a {
+  color: var(--porcelain);
+}
+
 .story-note {
   max-width: 44ch;
   padding-top: 24px;
