@@ -1,21 +1,5 @@
 /* Fonts (self-hosted, OFL; licenses in assets/fonts) */
 @font-face {
-  font-family: "Instrument Serif";
-  src: url("../fonts/instrument-serif-400.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Instrument Serif";
-  src: url("../fonts/instrument-serif-400-italic.woff2") format("woff2");
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
   font-family: "Inter Tight";
   src: url("../fonts/inter-tight-400.woff2") format("woff2");
   font-weight: 400;
@@ -45,7 +29,6 @@
   --tooth: #eaf6f0;
   --line: rgba(244, 247, 246, 0.16);
 
-  --serif: "Instrument Serif", "Iowan Old Style", Georgia, serif;
   --sans: "Inter Tight", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
 
   --gutter: 20px;
@@ -106,9 +89,9 @@ p {
 h1,
 h2,
 h3 {
-  font-family: var(--serif);
-  font-weight: 400;
-  line-height: 1;
+  font-family: var(--sans);
+  font-weight: 600;
+  line-height: 1.05;
   letter-spacing: -0.02em;
 }
 
@@ -259,7 +242,7 @@ section {
 }
 
 .hero h1 {
-  font-size: clamp(2.4rem, 4.6vw, 4.4rem);
+  font-size: clamp(2.1rem, 4vw, 3.7rem);
   line-height: 1.02;
 }
 
@@ -325,8 +308,9 @@ section {
 }
 
 .deck-name {
-  font-family: var(--serif);
-  font-size: clamp(1.7rem, 3vw, 2.3rem);
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: clamp(1.4rem, 2.5vw, 1.9rem);
   line-height: 1;
 }
 
@@ -409,7 +393,7 @@ section {
 }
 
 .step h2 {
-  font-size: clamp(2.4rem, 6.2vw, 5.4rem);
+  font-size: clamp(2rem, 5vw, 4.4rem);
   line-height: 0.98;
 }
 
@@ -481,8 +465,9 @@ section {
 
 .tile-title {
   position: relative;
-  font-family: var(--serif);
-  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: clamp(1.5rem, 2.5vw, 2.3rem);
   line-height: 1;
   letter-spacing: -0.02em;
 }
@@ -577,8 +562,9 @@ section {
 
 .story-name {
   margin-top: 8px;
-  font-family: var(--serif);
-  font-size: clamp(2rem, 3.4vw, 3rem);
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: clamp(1.7rem, 2.8vw, 2.5rem);
   line-height: 1;
 }
 
@@ -594,7 +580,7 @@ section {
 
 .story-body h3 {
   max-width: 16ch;
-  font-size: clamp(2rem, 3.8vw, 3.2rem);
+  font-size: clamp(1.8rem, 3.2vw, 2.7rem);
 }
 
 .story-intro {
@@ -664,9 +650,9 @@ section {
 
 .stage h4 {
   padding-top: 6px;
-  font-family: var(--serif);
-  font-weight: 400;
-  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: clamp(1.4rem, 2.4vw, 2.1rem);
   line-height: 1.05;
   letter-spacing: -0.02em;
 }
@@ -750,8 +736,9 @@ section {
   position: relative;
   display: inline-block;
   margin-top: 10px;
-  font-family: var(--serif);
-  font-size: clamp(1.7rem, 4.2vw, 3.4rem);
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: clamp(1.4rem, 3.4vw, 2.8rem);
   line-height: 1.05;
   letter-spacing: -0.02em;
   text-decoration: none;
@@ -829,8 +816,9 @@ section {
 .marquee span {
   padding-right: 0.5em;
   color: rgba(244, 247, 246, 0.07);
-  font-family: var(--serif);
-  font-size: clamp(4rem, 14vw, 12rem);
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: clamp(3.5rem, 12vw, 10rem);
   line-height: 1;
   white-space: nowrap;
 }
