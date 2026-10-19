@@ -847,8 +847,23 @@ section {
 
   .story-visual {
     z-index: 2;
-    height: 40svh;
-    background: linear-gradient(var(--surface) 82%, rgba(13, 50, 70, 0));
+    height: auto;
+    align-content: start;
+    padding-block: 12px 20px;
+    background: linear-gradient(var(--surface) 80%, rgba(13, 50, 70, 0));
+  }
+
+  .story-visual .arch {
+    width: min(70%, 240px);
+  }
+
+  .story-name {
+    margin-top: 4px;
+    font-size: 1.25rem;
+  }
+
+  .story-sub {
+    display: none;
   }
 
   .arch {
